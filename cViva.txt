@@ -1,0 +1,4 @@
+1.  What is variable ?
+    Ans:: named memory location
+
+2.  
