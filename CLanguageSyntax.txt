@@ -9,7 +9,7 @@ int main () {
 	double d = 34.26726362566265;
 	
 	printf("%d", i);
-	printf("\n%s", s);
+	printf("\n%s", s);-
 	printf("\n%c", c);
 	printf("\n%f", f);
 	printf("\n%lf", d);
@@ -22,3 +22,27 @@ int main () {
    // example: char, int
    
    //variable name, function name, label , user defined types 
+
+---c take input from user---
+
+int d, f;
+
+printf("Enter an number");
+scanf("%d, &d);
+
+printf("The number is %d" , &d);
+
+notes::
+
+1. scanf is for user input
+2. printf is for user print statement
+3. & is for using for address
+
+
+
+
+
+
+
+
+
