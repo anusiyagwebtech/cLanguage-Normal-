@@ -16,3 +16,9 @@ int main () {
 	
 	return 0;
 }
+
+// Keywords in C - total 32 keywords 
+   // C is a case sensitive . they are reserved words.
+   // example: char, int
+   
+   //variable name, function name, label , user defined types 
