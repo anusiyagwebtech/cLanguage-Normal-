@@ -1,0 +1,8 @@
+ int a;
+    float b;
+    char s[100];
+    
+    printf("Enter Two Numbers and one text \n");
+    scanf("%d %f %s", &a,&b, &s);
+    
+    printf("%s: %f", s,a+b);
