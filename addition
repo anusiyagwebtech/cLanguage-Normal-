@@ -1,0 +1,18 @@
+// assignment operator 
+  // right hand side la evaluate panni left hand side la variable la store pannum.
+  // syntax :: variable = expression or value;
+  
+  //For example::
+  
+  int a = 6; // a= 6
+  int b = a; // b = 6 => a = 6
+  a = a + b; // a = 6 + 6 = 12;
+    
+   printf("%d", a); // output a = 12
+   printf("\n");
+
+  //short hand
+  
+  a = a + 5; // a = 12 + 5; 17
+  a += 5;// a = 17 + 5 = 22 // a = a + 5 ; and a += 5 rendum equal dhaan.
+  printf("%d", a); // 22
