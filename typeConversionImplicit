@@ -1,0 +1,15 @@
+ //   Type Conversion
+
+    //Implicit Type Conversion ::  namma edhuvum solla venaam adhuve backgroudla pathukkum
+    
+    //short int = 2 bytes , int = 4 bytes . ippa short int la namma int ah store pannomna data lose irukkum.
+    
+    // int la short int store pannomna correctah store pannum.  
+     
+     short int a = 27786;
+     int b = 872378555;
+      int c = 872378555;
+     
+     a = b; // data lose
+     
+     printf("%d", a);
