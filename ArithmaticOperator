@@ -1,0 +1,12 @@
+  Arithmatic operator: + - * / %
+
+     int a, b;
+     
+     printf("Enter Two Numbers");     
+     scanf("%d %d", &a, &b);
+     
+     printf("%d\n", a+b);
+     printf("%d\n", a-b);
+	 printf("%d\n", a*b);
+	 printf("%d\n", a/b);  
+	 printf("%d\n", a%b); 
