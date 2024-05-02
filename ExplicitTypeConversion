@@ -1,0 +1,21 @@
+ // Explicit Conversion
+    
+    int a = 5;
+    int b = 2;
+    
+    float c = a / b; 
+     
+    printf("%f\n", c); // Expected: 2.5 result: 2.0000
+    
+    //if a or b is divided and stored to float but it is also a int . so we want to change it temporarily to float. so this is explicit conversion
+    float t = a;
+    float d =  t/b;     
+    printf("%f\n", d); // 2.5000
+    
+    float e = (float) a / b;  // here a is temporarily be a float
+    printf("%d\n", a);
+    printf("%f\n", e);
+    
+    a = (float)a; 
+    
+    printf("%a", a); //expected 5.000 but result is 5. because a is only  converted to float temporarily
