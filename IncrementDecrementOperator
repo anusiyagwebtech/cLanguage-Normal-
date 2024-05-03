@@ -15,3 +15,23 @@
 	--a; // a= 6 - 1= 5 = q;
 	
 	printf("%d", a);
+#include <stdio.h>
+int main () {
+    //pre decrement
+    int a , b;
+	
+	a = 5;
+
+	b = ++a; //b = a + 1 = a; => b = a+1; a = a+ 1;
+	
+	printf("\na: %d",a);
+	printf("\nb: %d",b);   
+	//post decrement
+	a = 5;
+	b = a++;// b = a = a + 1 => b = a; a = a + 1
+	
+	printf("\na: %d", a);
+	printf("\nb: %d", b);
+	
+    return 0;
+}
