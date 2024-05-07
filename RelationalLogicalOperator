@@ -1,0 +1,17 @@
+ //Relational operator: relation between 2 numbers 
+   //0 - false, non zero number & 1 - true
+    // Relational operators <, <=, >, >=, ==, !=
+    
+    //logical operator:  &&  - 2operands || - 2 operands ! - 1 operand (input 0 or 1)
+    
+    int a = 5, b = 10, c = 3;
+    
+    if(a < c || b > c) {
+    	printf("c: %d", c);
+	}
+	
+	
+	if(b > c && c < a) {
+		printf("\na: %d", a);
+	}
+	
