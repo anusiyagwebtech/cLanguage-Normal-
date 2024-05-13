@@ -1,0 +1,29 @@
+ //bitwise operator: &-and,|-or, ~-not(one's complement), ^(Exor),  >>(right shift), << (left shift)
+    // these operators are bit by bit operation nadakkum. adhavadhu namma number ah kuduthomna adha first bit wise convert panni aprom operations nadakkum.
+    
+    //AND: &
+    int d = 29, e = 17; // 12 = 1100 , 7 = 0111
+    int result = d & e;
+    // printf (1100 & 0111) last 0 & 1 = 0, 0 & 1 = 0 , 1 & 1 = 1, 1 & 0 = 0 => ans: 0100 = 4
+    printf("%d\n",result);  //ans: 17
+    
+    //OR: |
+    int b = 21, l = 9;
+    int result2 = b|l; //10101|01001 = 11101 = 29
+    //b = 21 = 10101 l = 9 = 01001 
+    
+    printf("%d", result2); // 29
+
+
+   //NOT: ~
+   int n = 14; //n = 1110 = 14 
+   int result3 = ~n; //~n = 0001 = 1 
+   
+   printf("\n%d", result3); // 1
+                              
+   //Exor ^ strict or oru true dhaan irukkanum.
+   
+   int ex =   45, orr = 78; //45 = 0101101 78 = 1001110
+   int result4 = ex^orr; // 1100011
+   printf("\nExor%d", result4); // 99
+   
