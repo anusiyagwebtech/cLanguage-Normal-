@@ -29,3 +29,35 @@ int chat () {
    
    return 0;	
 }
+
+
+
+#include <stdio.h>
+int whatbig() ;
+int main () {
+	
+   
+   
+  
+  whatbig();
+   
+   return 0;
+    
+}
+
+int whatbig () {
+ int  a,b,c;
+ printf("Enter three numbers\n");
+ scanf("%d %d %d", &a, &b, &c);
+ if(a > b) {
+ 	if(a > c) {
+ 		printf("A is greater %d", a);
+	 } 
+	 else {
+	 	printf("C is greater %d", c);
+	 }
+ }
+ else {
+ printf("b is greater %d", b);	
+ }
+}
