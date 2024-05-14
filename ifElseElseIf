@@ -1,0 +1,31 @@
+#include <stdio.h>
+int chat ();
+int main () {
+	
+   
+   
+  
+   chat();
+   chat();
+   chat();
+   
+   return 0;
+    
+}
+
+int chat () {
+ int a , b;
+   printf("\nEnter two numbers\n");
+   scanf("%d %d", &a , &b);
+   if(a < b) {
+   	printf("a = %d is small than b = %d", a, b);
+   }
+   else if(a > b){
+   	printf("a = %d is greater than b = %d", a, b);
+   }
+   else {
+   	printf("a = %d is equal to  b = %d", a, b);
+   }
+   
+   return 0;	
+}
