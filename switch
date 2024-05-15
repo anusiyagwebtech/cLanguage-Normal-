@@ -1,0 +1,38 @@
+#include <stdio.h>
+int simpleCalculator() ;
+int main () {
+	
+   
+   //conditional operator , ternerary operator
+  
+  simpleCalculator();
+   
+   return 0;
+    
+}
+
+int  simpleCalculator () {
+
+ int a, b, result;
+ char oper;
+ 
+ 
+ printf("Enter two numbers: ");
+ scanf("%d %d", &a, &b);
+ printf("Enter the operation you want to perform(+ - * % /)\n");
+ scanf(" %c", &oper);
+ printf("%d %d %c", a,b,oper);
+ 
+ switch (oper) {
+ 	case '+': result = a + b;printf("result %d", result); break;
+ 	case '-': result = a - b; printf("result %d", result);break;
+ 	case '*': result = a * b;printf("result %d", result); break;
+ 	case '/': result = a / b; printf("result %d", result);break;
+ 	case '%': result = a % b;printf("result %d", result); break;
+    default: printf("Enter correct operation");
+ }
+ 
+ 
+ printf("Enter operator");
+ 
+}
