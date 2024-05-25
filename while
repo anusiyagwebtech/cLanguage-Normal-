@@ -1,0 +1,18 @@
+//	Array
+	int a = 20;
+	
+  while(a >= 1){
+  	
+  	printf("*");
+  	if(a%10 == 0) {
+  		printf("\n %d", a);
+	  }
+  	a--;
+  } 
+  
+  int b = 34;
+  do  {
+  	printf("*");
+  } while(b > 34);
+  	
+   
