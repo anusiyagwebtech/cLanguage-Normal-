@@ -1,0 +1,28 @@
+#include <stdio.h>
+using namespace std;
+int max (int a[], int siz);
+int main () {
+   
+   
+    int a[10], siz;
+	printf("Enter number\n");
+	scanf("%d", &siz);
+	for(int i = 0; i < siz; i++) {
+		scanf("%d", &a[i]);
+	}
+	int result = max(a, siz);	
+	printf("%d", result);
+ 
+	return 0;
+}
+
+int max (int a[],int siz) {
+	int maximum = a[0];
+	
+	for (int i = 1; i < siz; i++) {
+	 maximum = a[i] > maximum ? a[i] : maximum;	
+	}
+	
+	return maximum;
+	
+}
