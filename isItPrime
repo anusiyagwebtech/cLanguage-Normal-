@@ -17,6 +17,37 @@ int main() {
     
     	if(a%i == 0) {
     		b = 0;
+
+
+//METHOD II
+#include<stdio.h>
+#include<Math.h>
+using namespace std;
+ int isItprime (int a);
+ 
+int main() {
+	
+	int a;
+	printf("Enter one number");
+	scanf("%d", &a);
+    int result =  isItprime(a);
+    
+    isItprime(a) == 0 ? printf("It is not a prime number"): printf("It is  a prime number");
+	return 0;
+}
+ int isItprime (int a) {
+    		int b;
+    for(int i = 2; i <= sqrt(a); i++){
+    
+    	if(a%i == 0) {
+    		b = 0;
+    		break;
+		} else {
+		    b = 1;	
+		}
+	}
+	return b;	
+	}
     		break;
 		} else {
 		    b = 1;	
@@ -26,3 +57,7 @@ int main() {
 	}
 	return b;	
 	}
+
+
+
+
