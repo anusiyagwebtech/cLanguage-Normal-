@@ -1,0 +1,28 @@
+#include<stdio.h>
+using namespace std;
+ int isItprime (int a);
+int main() {
+	
+	int a;
+	printf("Enter one number");
+	scanf("%d", &a);
+    int result =  isItprime(a);
+    
+    isItprime(a) == 0 ? printf("It is not a prime number"): printf("It is  a prime number");
+	return 0;
+}
+ int isItprime (int a) {
+    		int b;
+    for(int i = 2; i < a; i++){
+    
+    	if(a%i == 0) {
+    		b = 0;
+    		break;
+		} else {
+		    b = 1;	
+		}
+		
+		
+	}
+	return b;	
+	}
