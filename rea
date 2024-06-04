@@ -1,0 +1,599 @@
+React Native
+INSTALLATION NODE:
+Download node js:
+1. Go to Browser
+2. Search node js download
+3. (The official node js icon is shows with green logo) click the
+4. Click Latest version (LTS)
+5. select windows and download it.
+Install Node Js:
+1. double click the downloaded node js file in your local files (maximum it downloaded in
+download files )
+2. then it asks s popup the app can change your computer
+3. click yes
+4. and click next
+5. during installation process it asks automatic installation
+6. tick the checkbox (it is very necessary)
+7. and the command prompt is open
+8. press any key
+9. again press any key
+10. and then powershell is opened ( we don&#39;t need to access any things it just access it&#39; s own
+things)
+
+Check the downloaded Node Js File:
+1. in Your search Bar
+2. Search cmd
+
+3. it shows command prompt
+4. just open it
+5. In command prompt type node -v and npm -v -&gt; if it is installed correctly then version of
+the nodejs and npm is shows
+
+INSTALLATION ANDROID STUDIO:
+Download android studio:
+1. Go to Browser
+2. Search developer android.com
+3. (The official android studio icon is shows with green doll logo) click the link
+4. we can see download android studio
+5. just click the button
+6. It shows Download android studio HedgeHog
+7. click the button and download it. (At that time the version of the android studio (2023.1.1.28)
+Download and Install JDK(Java Development Kit):
+Download:
+1. Go to Browser
+2. Search Jdk download
+3. (The official oracle icon is shows with Java downloads oracle India) click the link
+
+4. we can see JDK17 just click the tab
+5. scroll It shows windows tab
+6. click the windows tab and download X64 Installer by click the link in direct.
+1. In search bar search Edit the system environment Variables click
+2. It shows Advanced tab and in here it shows environment variables
+
+3. click environment variables -&gt; It shows system variables click new button
+4. It shows variable name and variable value In variable Name type Java_Home In variable
+Value Browse the directory C:\program-files\java\jdk-17 -&gt; click ok button.
+Install Android Studio:
+Double click the android studio downloaded file
+Click Do not button
+ok , Next
+4 devices showed
+Install type is custom , Next , Next
+License Agreement , Next
+Emulated settings , next , Next
+License agreement (accept)
+click 3rd
+option Intel
+Finish
+It shows Downloading Components
+and is display the component path (c:users/user/appdata/local/android/sdk)
+finish
+and then it opens new window android studio
+It shows 4 options (projects, customize, plugin, learn) and in right side it shows open,
+new project, get from vcs and also display more actions. Click more actions
+click click sdk manager
+In stk platforms
+android 13.0 tiramisu, android sdk platform Intel X86_64, Google APIs then sdk tools
+android sdk Build_tools 34 , in 33.0.0 , Ndk side by side , in 25.1.89
+
+23.1.777
+click ok. Disk usage details showed click ok. And then all components installed just click
+finish and again the new project menu is also opened.
+1. In search bar search ‘Edit environmental variable’ In user variables for user
+2. click new button
+3. variable name : ANDROID_HOME , variable value:
+c:users\user\local\android\appdata\sdk (browse and choose the file) similarly again click
+new button variable name: ANDROID_SDK_ROOT , variable value:
+c:users\user\local\android\appdata\sdk,
+Search powershell and opened it and type Get-ChildItem – Path Env:\
+1. In android studio click more actions
+2. Virtual device management
+3. click + icon -&gt; select Hardware
+4. click pixel 4 play store icon
+5. Next (It shows must be select
+6. X86 Images
+7. Tiramisu (select)
+8. next
+9. pixel4 and tiramisu is selected
+10. click finish , click play button , and it start
+Create react native app:
+
+npx react-native init projectname
+If error shows enter: npx install –g npm@10.4.0 (it also display in the error with green color)
+again type the command npx react-native init projectname
+
+start the metro server: npx react-native start
+Run the app: npx react-native run-android
+Extensions are used to Install:
+ES7 + (dsznajder)
+Javascript es6 code snippet (charlaus)
+Prettier code formatter
+React-native/ react/redux – Equimber
+Auto Close tag – Jun Ha
+Bracket pair color DLW
+Color Highlight – sergii N
+Material Icon – Philip keif
+
+Reset the app command:
+npm start -- --reset-cache
+Navigation
+Go to browser search reactnavigation.org -&gt; clik -&gt; In that page click getstarted
+Install native-navigation command : npm install @react-navigation/native
+Install react-native-screens react-native-safe-area-context:
+npm install react-native-screens react-native-safe-area-context
+Insert code in MainActivity.kt file which is located under
+android/app/src/main/java/&lt;your package name&gt;/.
+The code
+class MainActivity: ReactActivity() {
+// ...
+override fun onCreate(savedInstanceState: Bundle?) {
+
+super.onCreate(null)
+}
+// ...
+}
+Import the line above the file
+import android.os.Bundle;
+Install stack command: npm install @react-navigation/native-stack
+create folder named Navigation inside the folder create Mainstact.js, Routes.js In Routes.js file
+
+In App.js file after return give this codes
+return (
+&lt;Routes/&gt;
+)
+In Routes.js file:
+Const Stack = createNativeStackNavigator();
+return (
+&lt;NavigationContainer&gt;
+&lt;Stack.Navigator&gt;
+{MainStack(Stack)}
+&lt;/Stack.Navigator&gt;
+&lt;/NavigationContainer&gt;
+In Main.js file:
+Const MainStack = (Stack) =&gt;
+{
+return(
+
+&lt;&gt;
+&lt;Stack.Screen name=’HomeScreen’ component={HomeScreen} /&gt;
+&lt;/&gt;
+)
+}
+In HomeScreen.js file:
+const HomeScreen = ()=&gt; {
+return (
+&lt;View&gt;
+&lt;Text&gt;Text&lt;/Text&gt;
+&lt;/View&gt;
+)
+}
+Web view:
+We need to install ‘react native webview’
+Cmd: npm i react-native-webview
+import {WebView} from react-native-webview;
+return (
+&lt;WebView source={{uri: ‘the website url’}} style={{flex: 1}}/&gt;
+)
+WEB LINK:
+Linking to another website through browser we use Linking object.
+&lt;TouchableOpacity onpress={()=&gt; Linking.OpenUrl(‘Link of the website’)}&gt;click
+me&lt;TouchableOpacity&gt;
+
+API GET METHOD:
+Fetch Method:
+const [post,setPost] = useState(null);
+const [loading, setLoading] = useState(false);
+useEffect(()=&gt;{
+fetch(&#39;https://jsonplaceholder.typicode.com/posts&#39;).then((data)=&gt; data.json()).then((data)=&gt;
+setPost(data));
+}, []);
+return (
+&lt;ScrollView style={{padding: 20, paddingBottom: 50}}&gt;
+{
+(post) ? post.map((value,index)=&gt;{
+return (
+&lt;UserCard id={value.id} body={value.body} title={value.title} key={index}/&gt;
+)
+}) : &lt;Text&gt;Hi&lt;/Text&gt;
+}
+Axios Method:
+const getData = async () =&gt; {
+setLoading(true);
+try {
+axios({
+method: &#39;get&#39;,
+url: &#39;https://jsonplaceholder.typicode.com/posts&#39;,
+}).then((response) =&gt; {
+
+setPost(response.data);
+setLoading(false);
+})
+} catch (error) {
+setLoading(false);
+console.error(&#39;error&#39;, error.message);
+}
+}
+useEffect(() =&gt; {
+getData();
+}, []);
+Post Method:
+Fetch Method:
+const press = ()=&gt; {
+fetch(&#39;https://65d47c9c3f1ab8c634354202.mockapi.io/Lock&#39;, {
+method: &#39;POST&#39;,
+headers: {
+Accept: &quot;application/json&quot;,
+&quot;Content-Type&quot;: &quot;application/json&quot;,
+},
+body: JSON.stringify({
+username: userName,
+password: password,
+})
+}).then((response) =&gt; response.json()).then((responseData) =&gt; (JSON.stringify(responseData)))
+
+setUserName(&#39;&#39;
+
+setPassword(&#39;&#39;);
+}
+Axios Method:
+const press = async () =&gt; {
+if(userName == &quot;&quot; | password == &quot;&quot;){
+showMessage({
+message: &#39;Enter Name and Password&#39;,
+type: &#39;info&#39;,
+backgroundColor: &#39;darkred&#39;,
+color: &#39;white&#39;,
+})
+}
+else{
+try {
+axios
+.post(&#39;https://65d47c9c3f1ab8c634354202.mockapi.io/Lock&#39;, {
+username: userName,
+password: password,
+})
+.then(response =&gt; setData(response.data));
+setUserName(&#39;&#39;);
+setPassword(&#39;&#39;);
+
+} catch (error) {
+setError(error);
+}
+show();
+}
+};
+function show(){
+(data) ? showMessage({
+message: &#39;Successfully Added&#39;,
+type: &#39;info&#39;,
+backgroundColor: &#39;darkgreen&#39;,
+color: &#39;white&#39;,
+}) : showMessage({
+message: &#39;error&#39;,
+type: &#39;info&#39;,
+backgroundColor: &#39;darkred&#39;,
+color: &#39;white&#39;,
+})
+}
+FORMIC (INPUT VALIDATION)
+Installed two packages
+1. npm install formik
+2. npm install yup
+import {Formik} from &#39;formik&#39;;
+const validate = Yup.object().shape( {
+
+name: Yup.string()
+
+.trim()
+.min(2, ({min}) =&gt; `Name must be at least ${min} characters`)
+.required(&#39;This Field is Nessessary&#39;),
+email: Yup.string().trim().email(&#39;Invalid Email&#39;).required(&#39;Field &#39;),
+password: Yup.string()
+.trim()
+.min(8, ({min}) =&gt; `Password atleast contain ${min} characters`)
+.required(&#39;this field is required&#39;),
+confirmPassword: Yup.string()
+.oneOf([Yup.ref(&#39;password&#39;), null], &#39;Password is must be matched&#39;)
+.required(&#39;This field is must be required&#39;),
+phoneNum: Yup.string()
+.matches(/^[0-9]+$/, &#39;Must be 10 digits&#39;)
+.required(&#39;This field is required&#39;),
+})
+
+&lt;View style={{paddingHorizontal: 16}}&gt;
+&lt;Formik
+initialValues={IntialValues}
+validationSchema={validate}
+onSubmit={(values, formikActions) =&gt; {
+console.log(&#39;submit values&#39;, values);
+sendUserData(values)
+
+formikActions.resetForm()
+}}&gt;
+{({
+values,
+errors,
+touched,
+handleChange,
+handleBlur,
+handleSubmit,
+}) =&gt; {
+// console.log(values);
+const {name, password, confirmPassword, phoneNum, email} = values;
+//console.log(&#39;errors.name&#39;, errors.name);
+return (
+&lt;View&gt;
+&lt;CutomTextInput
+placeholder={&#39;Name...&#39;}
+placeholderTextColor={&#39;grey&#39;}
+value={name}
+onChangeText={handleChange(&#39;name&#39;)}
+onBlur={handleBlur(&#39;name&#39;)}
+error={touched.name &amp;&amp; errors.name}
+/&gt;
+&lt;CutomTextInput
+placeholder={&#39;Email...&#39;}
+
+placeholderTextColor={&#39;grey&#39;}
+value={email}
+onChangeText={handleChange(&#39;email&#39;)}
+onBlur={handleBlur(&#39;email&#39;)}
+error={touched.email &amp;&amp; errors.email}
+keyboardType={&#39;email-address&#39;}
+/&gt;
+&lt;CutomTextInput
+placeholder={&#39;Password...&#39;}
+
+placeholderTextColor={&#39;grey&#39;}
+value={password}
+onChangeText={handleChange(&#39;password&#39;)}
+onBlur={handleBlur(&#39;password&#39;)}
+error={touched.password &amp;&amp; errors.password}
+secureTextEntry={true}
+/&gt;
+&lt;CutomTextInput
+placeholder={&#39;Confirm Password...&#39;}
+placeholderTextColor={&#39;grey&#39;}
+value={confirmPassword}
+onChangeText={handleChange(&#39;confirmPassword&#39;)}
+onBlur={handleBlur(&#39;confirmPassword&#39;)}
+error={touched.confirmPassword &amp;&amp; errors.confirmPassword}
+secureTextEntry={true}
+
+/&gt;
+&lt;CutomTextInput
+placeholder={&#39;Phone Number...&#39;}
+placeholderTextColor={&#39;grey&#39;}
+value={phoneNum}
+onChangeText={handleChange(&#39;phoneNum&#39;)}
+maxLength={10}
+keyboardType={&#39;numeric&#39;}
+onBlur={handleBlur(&#39;phoneNum&#39;)}
+error={touched.phoneNum &amp;&amp; errors.phoneNum}
+/&gt;
+&lt;MyButton
+btnName={&#39;submit&#39;}
+btnStyle={{marginTop: 20, height: 47}}
+onPress={()=&gt; handleSubmit()}
+/&gt;
+&lt;/View&gt;
+);
+}}
+&lt;/Formik&gt;
+&lt;/View&gt;
+Run the app in our mobile:
+1. Go to your mobiles settings
+2. Go to the about phone
+3. In about phone go to software Information
+4. Go to build number
+5. Enter the pin
+
+6. Go to developer options and make it on
+7. Go to usb debugging ( allow usb debugging and then connect the mobile to computer with usb
+cable and in your project run the project and is also runned in your mobile
+Build APK: (Android Package Kit File format)
+Refernce : https://reactnative.dev/docs/signed-apk-android
+1. Open the command prompt run as administrator and in change the directory to java file following
+path.
+2. (C:\Program Files\Java\jdkx.x.x_x\bin)
+3. copy the code
+4. keytool -genkeypair -v -storetype PKCS12 -keystore my-upload-key.keystore -alias my-key-alias -
+keyalg RSA -keysize 2048 -validity 10000
+5. this command asks some questions and answer it for and then it generates my-upload-key.keystore
+in the path of (java/jdk-/bin/my-upload-key.keystore)
+6. cut the file and copy in your project (android / app/) folder.
+7. Go to your projects (android/gradle.properties) file
+8. And copy the below code in the (android/gradle.properties) file page last line
+MYAPP_UPLOAD_STORE_FILE=my-upload-key.keystore
+MYAPP_UPLOAD_KEY_ALIAS=my-key-alias
+MYAPP_UPLOAD_STORE_PASSWORD=*****
+MYAPP_UPLOAD_KEY_PASSWORD=*****
+9. Instead of star you gave your password that is asked before .
+10. Go to your project’s android/app/build.gradle
+11. and copy the below code.
+...
+android {
+...
+defaultConfig { ... }
+signingConfigs {
+
+release {
+if (project.hasProperty(&#39;MYAPP_UPLOAD_STORE_FILE&#39;)) {
+storeFile file(MYAPP_UPLOAD_STORE_FILE)
+storePassword MYAPP_UPLOAD_STORE_PASSWORD
+keyAlias MYAPP_UPLOAD_KEY_ALIAS
+keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+}
+}
+}
+buildTypes {
+release {
+...
+signingConfig signingConfigs.release
+}
+}
+}
+...
+12. go to your project and open the terminal change the directory to (/android) and command the code
+below.
+13. ./gradlew assembleRelease
+14. go to your project’s android/app/build/outputs/bundle/release/app-release.apk
+file . copy the file and paste it to your mobile download section and install
+it .
+Convert Json to dable data and Export it into pdf:
+
+import { StyleSheet, Text, View,Platform, PermissionsAndroid, Alert } from &#39;react-native&#39;
+import React, { useEffect, useState } from &#39;react&#39;
+import axios from &#39;axios&#39;;
+
+import RNHTMLtoPDF from &#39;react-native-html-to-pdf&#39;;
+import {DownloadDirectoryPath, DocumentDirectoryPath, moveFile, unlink, exists} from &#39;react-native-
+fs&#39;;
+import moment from &#39;moment&#39;;
+import { MyButton } from &#39;../../Components&#39;;
+import { customAlphabet, nanoid } from &#39;nanoid/non-secure&#39;;
+
+const RegisterationScreen = () =&gt; {
+const [data, setData] = useState(&#39;&#39;);
+const uId = customAlphabet(&#39;0123456789&#39;, 1);
+useEffect(()=&gt; {
+storagePermission();
+getData();
+}, [])
+const createPdf = async () =&gt; {
+const htmlContent = `
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+table , th, td {
+border: 1px solid #060606;
+}
+th, td {
+padding: 10px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;table&gt;
+&lt;tr&gt;
+&lt;th&gt;Confirm Password&lt;/th&gt;
+&lt;th&gt;Password&lt;/th&gt;
+&lt;th&gt;Email&lt;/th&gt;
+&lt;th&gt;Phone Number&lt;/th&gt;
+
+&lt;th&gt;User Name&lt;/th&gt;
+&lt;th&gt;Id&lt;/th&gt;
+&lt;/tr&gt;
+${
+data != &#39;&#39; ? data.map((value,index) =&gt; {
+return `
+&lt;tr&gt;
+&lt;td&gt;${value.confirmPassword}&lt;/td&gt;
+&lt;td&gt;${value.password}
+&lt;/td&gt;
+&lt;td&gt;${value.email}&lt;/td&gt;
+&lt;td&gt;${value.phoneNumber}&lt;/td&gt;
+&lt;td&gt;${value.username}&lt;/td&gt;
+&lt;td&gt;${value.id}&lt;/td&gt;
+&lt;/tr&gt;
+`
+}).join(&#39;&#39;): null
+}
+&lt;/table&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+`
+const option = {
+html: htmlContent,
+fileName: &#39;userDetails&#39;,
+useDownloadManager: true,
+notification: true,
+directory: &#39;Document&#39;,
+width: 842,
+// height: 595,
+}
+const newPath = `
+${DownloadDirectoryPath}/userDetails${uId()}.pdf`
+
+try {
+const fileExist = await exists(newPath)
+RNHTMLtoPDF.convert(option).then(pdf =&gt; {
+// Alert.alert(&#39;PDF Saved successfully&#39;, pdf.filePath);
+// console.log(pdf.filePath);
+
+if(fileExist){
+const timestamp = new Date().getTime();
+const timechange = moment(timestamp).format(&#39;DD-MM-YY&#39;)
+const newFileName = `userDetails_${uId()}.pdf`
+const newFilePath = `${DownloadDirectoryPath}/${newFileName}`
+unlink(newPath)
+moveFile(pdf.filePath, newFilePath)
+.then(() =&gt; {
+Alert.alert(&#39;PDF Saved successfully&#39;, newFilePath);
+console.log(&#39;PDF Saved successfully&#39;, newFilePath);
+})
+.catch(error =&gt; {
+console.log(&#39;Error Moved file&#39;, error.message);
+});
+}else {
+moveFile(pdf.filePath, newPath)
+.then(() =&gt; {
+Alert.alert(&#39;PDF Saved successfully&#39;, newPath);
+console.log(&#39;PDF Saved successfully&#39;, newPath);
+})
+.catch(error =&gt; {
+console.log(&#39;Error Moved file&#39;, error.message);
+});
+}
+});
+} catch (error) {
+console.log(&#39;error&#39;, error);
+}
+}
+const getData = async () =&gt; {
+try {
+axios.get(&#39;https://65d47c9c3f1ab8c634354202.mockapi.io/Lock&#39;)
+.then((response) =&gt; {
+setData(response.data)
+})
+} catch (error) {
+console.log(&#39;Get data error&#39;, error);
+}
+}
+
+console.log(&#39;data&#39;);
+console.log(data);
+const storagePermission = async () =&gt; {
+if (Platform.OS === &#39;android&#39; &amp;&amp; Platform.Version &lt; 10) {
+try {
+const granted = await PermissionsAndroid.request(
+PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+);
+if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+console.log(&#39;permission granted&#39;, granted);
+} else {
+console.log(&#39;permission FAILED&#39;, granted);
+}
+} catch (error) {
+console.log(&#39;permission FAILED&#39;, error);
+}
+} else if (Platform.OS === &#39;android&#39; &amp;&amp; Platform.Version &gt;= 13) {
+const granted = await PermissionsAndroid.request(
+PermissionsAndroid.PERMISSIONS.WRITE_EXTERNAL_STORAGE,
+);
+console.log(&#39;storage permission request granted&#39;);
+}
+};
+return (
+&lt;View&gt;
+&lt;MyButton btnName={&#39;Download&#39;} onPress={()=&gt; createPdf()}/&gt;
+&lt;/View&gt;
+)
+}
+export default RegisterationScreen
+const styles = StyleSheet.create({})
