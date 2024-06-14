@@ -21,3 +21,26 @@ int cubeFinder (int num) {
 	}
 	return 0;
 }
+
+#include <stdio.h>
+#include<math.h>
+
+
+
+void powerFounder(int number, int power);
+
+int main () {
+	
+
+ int number = 2, power = 6;
+  
+  powerFounder(number,power);
+   
+   return 0;
+  
+
+}
+
+void powerFounder(int number , int power) {
+	printf("%d", (int)pow(number,power));
+}
