@@ -12,7 +12,7 @@ int main() {
   
   for (int i = 1; i < num*2; i = i+2) {
   	char tempstr[10];
-  	snprintf(tempstr, sizeof(i),"%d ", i);
+  	snprintf(tempstr, sizeof(tempstr),"%d ", i);
   	strcat(str,tempstr);
   	sum += i;
   }
