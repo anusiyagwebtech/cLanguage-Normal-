@@ -169,4 +169,24 @@ for (int i = 0; i < limit; i++) {
 	  printf("\n");
 	
 }
- 
+10. 
+//   1
+//  2 2
+// 3 3 3
+//4 4 4 4
+
+
+    int limit;
+    printf("Enter the number for Magic: ");
+    scanf("%d", &limit);
+    
+   
+    for (int i = 0; i < limit; i++) {
+    	for (int s = i; s < limit-1; s++) {
+    		printf(" ");
+		}
+    	for (int j = 0; j < i+1; j++) {
+    		printf("%d ", i+1);
+		}
+		printf("\n");
+	}
