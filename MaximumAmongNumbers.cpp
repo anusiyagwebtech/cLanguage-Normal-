@@ -45,3 +45,26 @@ int main() {
 	
 	return 0;
 }
+//  find the maximum in the number
+#include <stdio.h>
+int main()  {
+	
+	int limit;
+	
+    printf("Enter how many numbers you want to find the maximum");
+    scanf("%d", &limit);
+    int a[limit];
+    
+    for (int i = 0; i < limit; i++) {
+    	printf("\nEnter the number");
+    	scanf("%d", &a[i]);
+	}
+	
+	int max = a[0];
+	for (int i = 1; i < limit; i++) {
+		if(max < a[i]) max = a[i];
+	}
+	printf("The Highest Value is %d", max);
+	
+	return 0;
+}
