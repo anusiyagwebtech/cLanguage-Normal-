@@ -68,3 +68,22 @@ int main()  {
 	
 	return 0;
 }
+
+
+#include <stdio.h>
+#include<Math.h>
+
+int main() {
+	
+	int a1, a2, a3, max;
+	
+	printf("\nEnter three Numbers: ");
+	scanf("%d %d %d", &a1, &a2, &a3);
+	max = fmax(a1, fmax(a2,a3));
+	
+	printf("\nThe Highest Value: %d", max);
+	
+	
+	
+	return 0;
+}
